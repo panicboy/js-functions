@@ -3,6 +3,9 @@
  * @param {number} n
  * @return {string} the number as a string
  */
+ function numberToString(Number){
+  return Number.toString();
+ }
 
 
 /**
@@ -11,12 +14,20 @@
  * @return {number}
  */
 
+function increase(n){
+return n+1;
+}
+
 
 /**
  * Subtracts one from a given number.
  * @param {number} n
  * @return {number}
  */
+
+ function decrease(n){
+  return n-1;
+ }
 
 
 /**
@@ -25,6 +36,9 @@
  * @param {number} y
  * @return {number} the sum
  */
+ function add(x, y){
+  return x+y;
+ }
 
 
 /**
@@ -33,6 +47,9 @@
  * @param {number} y
  * @return {number} the difference
  */
+ function subtract(x, y){
+  return x-y;
+ }
 
 
 /**
@@ -41,6 +58,9 @@
  * @param {number} y
  * @return {number} the product
  */
+ function multiply(x, y){
+  return x*y;
+ }
 
 
 /**
@@ -49,6 +69,9 @@
  * @param {number} y
  * @return {number} the quotient
  */
+ function divide(x, y){
+  return x/y;
+ }
 
 
 /**
@@ -56,6 +79,9 @@
  * @param {number} x, number to be squared
  * @return {number} squared
  */
+ function square(x){
+  return x*x;
+ }
 
 
 /**
@@ -66,6 +92,22 @@
  * @param {number} y
  * @return {number} the result
  */
+function calculate(operation, x, y){
+  switch (operation){
+    case "add":
+    console.log(x + " + " + y + " = " + (x+y));
+      return x+y;
+    case "subtract":
+      console.log(x + " - " + y + " = " + (x-y));
+      return x-y;
+    case "multiply":
+      console.log(x + " * " + y + " = " + (x*y));
+      return x*y;
+    case "divide":
+      console.log(x + " / " + y + " = " + (x/y));
+      return x/y;
+  }
+}
 
 
 /**
@@ -75,6 +117,9 @@
  * @return {boolean} `a` is larger than `b`
  */
 
+ function isGreaterThan(a, b){
+  return a>b;
+ }
 
 /**
  * Returns true if `a` is less than `b`.
@@ -82,7 +127,9 @@
  * @param {number} b
  * @return {boolean} `a` is smaller than `b`
  */
-
+function isLessThan(a, b){
+  return a<b;
+}
 
 /**
  * Returns true if `a` and `b` are equal.
@@ -90,6 +137,9 @@
  * @param {number} b
  * @return {boolean} the numbers are equal
  */
+ function areEqual(a, b){
+  return a === b;
+ }
 
 
 /**
@@ -98,6 +148,14 @@
  * @param {number} y
  * @return {number} the smallest number
  */
+ function minimum(x, y){
+  if(x<y){
+    return x;
+  }
+  else {
+    return y;
+  }
+ }
 
 
 /**
@@ -106,6 +164,14 @@
  * @param {number} y
  * @return {number} the largest number
  */
+ function maximum(x, y){
+    if(x>y){
+    return x;
+  }
+  else {
+    return y;
+  }
+ }
 
 
 /**
@@ -113,6 +179,9 @@
  * @param {number} n
  * @return {boolean} the number is even
  */
+ function isEven(n){
+  return ((n % 2) === 0);
+ }
 
 
 /**
@@ -120,6 +189,10 @@
  * @param {number} n
  * @return {boolean} the number is odd
  */
+
+function isOdd(n){
+  return ((n % 2) !== 0);
+}
 
 
 /**
@@ -133,6 +206,21 @@
  * @param {number} total maximum possible score
  * @return {string} the score represented as a letter grade
  */
+ function letterGrade(score, total){
+  var gradePercent = (score/total)*100;
+  switch(gradePercent){
+    case gradePercent >= 90:
+      return "A";
+    case gradePercent >= 80:
+      return "B";
+    case gradePercent >= 70:
+      return "C";
+    case gradePercent >= 60:
+      return "D";
+    case gradePercent < 60:
+      return  "F";
+  }
+ }
 
 
 /**
