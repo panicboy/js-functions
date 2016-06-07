@@ -208,16 +208,15 @@ function isOdd(n){
  */
  function letterGrade(score, total){
   var gradePercent = (score/total)*100;
-  switch(gradePercent){
-    case gradePercent >= 90:
-      return "A";
-    case gradePercent >= 80:
-      return "B";
-    case gradePercent >= 70:
-      return "C";
-    case gradePercent >= 60:
-      return "D";
-    case gradePercent < 60:
+  if (gradePercent >= 90){
+    return "A";
+  } else if(gradePercent >= 80){
+     return "B";
+  } else if(gradePercent >= 70){
+    return "C";
+  } else if(gradePercent >= 60){
+    return "D";
+  } else {
       return  "F";
   }
  }
@@ -231,6 +230,15 @@ function isOdd(n){
  * @return {object} restaurant
  */
 
+ function incrementReviews(restaurant){
+  if(restaurant.reviews === undefined){
+    restaurant.reviews = 1;
+  }
+  else{
+    restaurant.reviews = restaurant.reviews++;
+  }
+ }
+
 
 /**
  * Joins two strings with a space.
@@ -238,6 +246,10 @@ function isOdd(n){
  * @param {string} word2
  * @return {string} joined the words joined with a space
  */
+
+ function combine(word1, word2){
+  return word1 + ' ' + word2;
+ }
 
 
 /**
@@ -247,4 +259,10 @@ function isOdd(n){
  * @param {number} radius
  * @return {object} circle
  */
+
+function createCircle(radius){
+var circle = {circumference: 2 * Math.PI * radius,
+area: Math.PI * radius * radius};
+return circle;
+ }
 
